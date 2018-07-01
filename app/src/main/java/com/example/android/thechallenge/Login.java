@@ -94,16 +94,19 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d("Message","firebaseAuthWithGoogle:" + acct.getId());
 
+        final String Id = acct.getId();
+
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Message","signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent addTaskIntent = new Intent(Login.this, MainActivity.class);
+                            Intent addTaskIntent = new Intent(Login.this, MainActivity.class).putExtra("theUserId",Id);
                             startActivity(addTaskIntent);
 
                         } else {

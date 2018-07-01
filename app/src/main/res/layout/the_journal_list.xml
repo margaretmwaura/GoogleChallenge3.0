@@ -10,19 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"/>
-    <!--<TextView-->
-        <!--android:id="@+id/the_journal_date"-->
-        <!--style="@style/TextAppearance.AppCompat.Large"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:padding="16dp"/>-->
-    <!--<TextView-->
-        <!--android:id="@+id/the_journal_thoughts"-->
-        <!--style="@style/TextAppearance.AppCompat.Large"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:padding="16dp"/>-->
-
+    <TextView
+        android:id="@+id/the_journal_date"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"/>
+    <TextView
+        android:id="@+id/the_journal_thoughts"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"/>
+<!---->
     <!--this view is meant to separate the list views-->
     <View
         android:layout_width="match_parent"

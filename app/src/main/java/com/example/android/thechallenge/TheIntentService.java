@@ -26,7 +26,7 @@ public class TheIntentService extends IntentService
 //      retrieving the action
         DatabaseActivities mine = new DatabaseActivities();
        String action = intent.getAction();
-       mine.insert(action);
+       mine.actionTaken(action);
         Log.d("Intent","Database started");
 
     }

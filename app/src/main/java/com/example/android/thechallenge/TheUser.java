@@ -11,7 +11,7 @@ public class TheUser
 {
     private String Title;
     private String Thoughts;;
-
+    private String ID;
 //This are the methods for setting data
     public void setTitle(String Title)
     {
@@ -23,6 +23,8 @@ public class TheUser
        this.Thoughts= Thoughts;
     }
 
+    public void setID(String ID){this.ID = ID;}
+
 //    This are the methods for retrieving the data
 
     public String getTitle()
@@ -33,5 +35,9 @@ public class TheUser
     public String getThoughts()
     {
         return this.Thoughts;
+    }
+    public String getId()
+    {
+        return this.ID;
     }
 }

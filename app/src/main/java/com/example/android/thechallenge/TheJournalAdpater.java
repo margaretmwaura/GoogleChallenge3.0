@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.ThemedSpinnerAdapter;
+
+import java.util.List;
 
 /**
  * Created by TOSHIBA on 6/29/2018.
@@ -17,7 +20,8 @@ public class TheJournalAdpater extends RecyclerView.Adapter<TheJournalAdpater.th
 {
 
     //this specifies the number
-    private String[] theJournalData;
+    private List<TheUser> mTaskEntries;
+    Context mContext;
     @NonNull
     @Override
     public theJournalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -35,22 +39,50 @@ public class TheJournalAdpater extends RecyclerView.Adapter<TheJournalAdpater.th
         return new theJournalViewHolder(view);
     }
 
+//    the constructor
+
+    public TheJournalAdpater(Context context)
+    {
+      mContext = context;
+    }
+
     @Override
-    public void onBindViewHolder(@NonNull theJournalViewHolder holder, int position)
+    public void onBindViewHolder( theJournalViewHolder holder, int position)
     {
 //        to be properly implemented later
+
+        // Determine the values of the wanted data
+        TheUser maggie = mTaskEntries.get(position);
+        String title = maggie.getTitle();
+        String thought = maggie.getThoughts();
+
+        //Set values
+        holder.title.setText(title);
+        holder.data.setText(thought);
+
 
     }
 
     @Override
     public int getItemCount() {
-        if(null == theJournalData)
+        if(mTaskEntries==null)
         {
             return 0;
         }
-//        This is the correct versio
-//        return theJournalData.length;
-        return 3;
+//        This is the correct version
+        return mTaskEntries.size();
+
+//        For trying purposes
+//        return 3;
+    }
+
+    public List<TheUser> getTasks() {
+        return mTaskEntries;
+    }
+
+    public void setTasks(List<TheUser> taskEntries) {
+        mTaskEntries = taskEntries;
+        notifyDataSetChanged();
     }
 
 //    this is the inner class for the viewHolder
@@ -67,9 +99,9 @@ public class TheJournalAdpater extends RecyclerView.Adapter<TheJournalAdpater.th
         public theJournalViewHolder(View itemView)
         {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.the_journal_title);
-//            date = (TextView) itemView.findViewById(R.id.the_journal_date);
-//            data = (TextView) itemView.findViewById(R.id.the_journal_thoughts);
+            title =  itemView.findViewById(R.id.the_journal_title);
+            date = itemView.findViewById(R.id.the_journal_date);
+            data =  itemView.findViewById(R.id.the_journal_thoughts);
 
         }
 
