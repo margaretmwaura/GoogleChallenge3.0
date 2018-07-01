@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.thechallenge.Sign">
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:imeActionId="@+id/login"
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textColorHint="#A5D6A7"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:singleLine="true"
+
+        android:textColor= "#000"/>
+
+
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+
+        android:imeOptions="actionUnspecified"
+        android:inputType="textPassword"
+        android:maxLines="1"
+
+        android:textColorHint="#A5D6A7"
+        android:singleLine="true"
+        android:textColor="#000" />
+
+
+
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="320dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#A5D6A7"
+        android:text="Create account"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+</LinearLayout>

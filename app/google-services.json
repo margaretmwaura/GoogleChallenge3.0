@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "475028594459",
+    "firebase_url": "https://thechallenge-2c89c.firebaseio.com",
+    "project_id": "thechallenge-2c89c",
+    "storage_bucket": "thechallenge-2c89c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475028594459:android:2301d2602d7707f0",
+        "android_client_info": {
+          "package_name": "com.example.android.thechallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475028594459-apl1pjlhnk82qrepbkgg2pgpu0v6h1o4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.thechallenge",
+            "certificate_hash": "9924572486d22909dec3d2a6bc4d9f2edd8b5701"
+          }
+        },
+        {
+          "client_id": "475028594459-2bef5jga0fbs9ibn8utli6jecgt96737.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfX2vdcWxBeCKHgPBhMHZS2xVCooCrVqA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475028594459-2bef5jga0fbs9ibn8utli6jecgt96737.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
